@@ -159,10 +159,11 @@ const ChatbotUI = () => {
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setRecentChats((prevChats) => [input, ...prevChats.slice(0, 4)]);
     setInput("");
+    const API_URL = process.env.REACT_APP_API_URL;
 
     try {
       console.log("Sending request to backend with prompt:", input);
-      const response = await axios.post("http://localhost:5000/gemini", { prompt: input });
+      const response = await axios.post(`${API_URL}/gemini`, { prompt: input });
 
       console.log("Response received from backend:", response.data);
 
