@@ -360,6 +360,7 @@ const ChatbotUI = () => {
     }}
   >
     <Form.Control
+      className="custom-placeholder"
       placeholder="Add a message..."
       value={input}
       onChange={(e) => setInput(e.target.value)}

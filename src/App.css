@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.custom-placeholder::placeholder {
+  color: white !important; /* Force white color */
+  opacity: 1; /* Ensure full visibility */
+  font-style: italic;
+}
+
